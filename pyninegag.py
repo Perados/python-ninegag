@@ -79,7 +79,7 @@ def _get_gif(container):
     tag = container.find(attrs='badge-animated-container-animated')
     if not tag:
         return None
-    return {'url': tag['data-image'], 'type': 'gif'}
+    return {'url': tag['data-mp4'], 'type': 'mp4', 'thumbnail': tag.video['poster']}
 
 
 def _get_image(container):
