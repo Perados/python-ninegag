@@ -159,7 +159,7 @@ def _parse_article(article):
     data['url'] = article['data-entry-url']
     data['votes'] = article['data-entry-votes']
     data['comments'] = article['data-entry-comments']
-    data['title'] = article.find(attrs='badge-item-title').a.text.strip()
+    data['title'] = article.find(attrs='badge-item-title').text.strip()
     try:
         data['data'] = _get_data(article)
     except NotSafeForWork:
